@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA9269F6A78F939AFF4CD17 /* Pods_MinderaGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC93FEFED97D7B394C444D7 /* Pods_MinderaGalleryTests.framework */; };
 		66FBA17220599EC200CA317C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA17120599EC200CA317C /* AppDelegate.swift */; };
 		66FBA17420599EC200CA317C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA17320599EC200CA317C /* ViewController.swift */; };
 		66FBA17720599EC200CA317C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FBA17520599EC200CA317C /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		66FBA17C20599EC200CA317C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66FBA17A20599EC200CA317C /* LaunchScreen.storyboard */; };
 		66FBA18720599EC200CA317C /* MinderaGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA18620599EC200CA317C /* MinderaGalleryTests.swift */; };
 		66FBA19220599EC200CA317C /* MinderaGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA19120599EC200CA317C /* MinderaGalleryUITests.swift */; };
+		7CADB7C4FABA750174D34BD3 /* Pods_MinderaGalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889B6E1D2E4DEAB54399E48A /* Pods_MinderaGalleryUITests.framework */; };
+		A93B03E90175EE5C253C1941 /* Pods_MinderaGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BF1BAEAECA806C54243BA /* Pods_MinderaGallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C0306CC8F20E5DFF5B2204 /* Pods-MinderaGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGalleryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGalleryTests/Pods-MinderaGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		262BF1BAEAECA806C54243BA /* Pods_MinderaGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinderaGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA89E7D841E64235B565B2E /* Pods-MinderaGalleryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGalleryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGalleryUITests/Pods-MinderaGalleryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		66FBA16E20599EC200CA317C /* MinderaGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinderaGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FBA17120599EC200CA317C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66FBA17320599EC200CA317C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		66FBA18D20599EC200CA317C /* MinderaGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinderaGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FBA19120599EC200CA317C /* MinderaGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinderaGalleryUITests.swift; sourceTree = "<group>"; };
 		66FBA19320599EC200CA317C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F420AD0C0C5B5C763F3A2E /* Pods-MinderaGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGalleryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGalleryUITests/Pods-MinderaGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		889B6E1D2E4DEAB54399E48A /* Pods_MinderaGalleryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinderaGalleryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E737355BBF7263B136508E0 /* Pods-MinderaGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery.release.xcconfig"; sourceTree = "<group>"; };
+		ABA3E54BAF80C107F00C07B8 /* Pods-MinderaGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		AF21E2875A7A25B16CA3AA64 /* Pods-MinderaGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGalleryTests/Pods-MinderaGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
+		FCC93FEFED97D7B394C444D7 /* Pods_MinderaGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinderaGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93B03E90175EE5C253C1941 /* Pods_MinderaGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA9269F6A78F939AFF4CD17 /* Pods_MinderaGalleryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CADB7C4FABA750174D34BD3 /* Pods_MinderaGalleryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				66FBA18520599EC200CA317C /* MinderaGalleryTests */,
 				66FBA19020599EC200CA317C /* MinderaGalleryUITests */,
 				66FBA16F20599EC200CA317C /* Products */,
+				A09C2450A8238BC9398C355E /* Pods */,
+				8D66C2D3652EB0C1E36BE116 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = MinderaGalleryUITests;
 			sourceTree = "<group>";
 		};
+		8D66C2D3652EB0C1E36BE116 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				262BF1BAEAECA806C54243BA /* Pods_MinderaGallery.framework */,
+				FCC93FEFED97D7B394C444D7 /* Pods_MinderaGalleryTests.framework */,
+				889B6E1D2E4DEAB54399E48A /* Pods_MinderaGalleryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A09C2450A8238BC9398C355E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABA3E54BAF80C107F00C07B8 /* Pods-MinderaGallery.debug.xcconfig */,
+				8E737355BBF7263B136508E0 /* Pods-MinderaGallery.release.xcconfig */,
+				18C0306CC8F20E5DFF5B2204 /* Pods-MinderaGalleryTests.debug.xcconfig */,
+				AF21E2875A7A25B16CA3AA64 /* Pods-MinderaGalleryTests.release.xcconfig */,
+				2BA89E7D841E64235B565B2E /* Pods-MinderaGalleryUITests.debug.xcconfig */,
+				72F420AD0C0C5B5C763F3A2E /* Pods-MinderaGalleryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66FBA19620599EC200CA317C /* Build configuration list for PBXNativeTarget "MinderaGallery" */;
 			buildPhases = (
+				A99F765B5120EC863C84D767 /* [CP] Check Pods Manifest.lock */,
 				66FBA16A20599EC200CA317C /* Sources */,
 				66FBA16B20599EC200CA317C /* Frameworks */,
 				66FBA16C20599EC200CA317C /* Resources */,
+				60E507F72279D859FCAB0553 /* [CP] Embed Pods Frameworks */,
+				BCADDA28A0289ACAD6DD68A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66FBA19920599EC200CA317C /* Build configuration list for PBXNativeTarget "MinderaGalleryTests" */;
 			buildPhases = (
+				3E822ACC87CD30DFC4C39218 /* [CP] Check Pods Manifest.lock */,
 				66FBA17E20599EC200CA317C /* Sources */,
 				66FBA17F20599EC200CA317C /* Frameworks */,
 				66FBA18020599EC200CA317C /* Resources */,
+				03FD90EB164096B58FF77840 /* [CP] Embed Pods Frameworks */,
+				6E13B8D180D7B329B4C30684 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66FBA19C20599EC200CA317C /* Build configuration list for PBXNativeTarget "MinderaGalleryUITests" */;
 			buildPhases = (
+				08C4180FDD92DEF3234272A6 /* [CP] Check Pods Manifest.lock */,
 				66FBA18920599EC200CA317C /* Sources */,
 				66FBA18A20599EC200CA317C /* Frameworks */,
 				66FBA18B20599EC200CA317C /* Resources */,
+				B2758BD9816BF9065AE76214 /* [CP] Embed Pods Frameworks */,
+				EAEB1DA306080A0626816F59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03FD90EB164096B58FF77840 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGalleryTests/Pods-MinderaGalleryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08C4180FDD92DEF3234272A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinderaGalleryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E822ACC87CD30DFC4C39218 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinderaGalleryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60E507F72279D859FCAB0553 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E13B8D180D7B329B4C30684 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGalleryTests/Pods-MinderaGalleryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A99F765B5120EC863C84D767 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinderaGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2758BD9816BF9065AE76214 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGalleryUITests/Pods-MinderaGalleryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCADDA28A0289ACAD6DD68A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAEB1DA306080A0626816F59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinderaGalleryUITests/Pods-MinderaGalleryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66FBA16A20599EC200CA317C /* Sources */ = {
@@ -424,6 +625,7 @@
 		};
 		66FBA19720599EC200CA317C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA3E54BAF80C107F00C07B8 /* Pods-MinderaGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +641,7 @@
 		};
 		66FBA19820599EC200CA317C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E737355BBF7263B136508E0 /* Pods-MinderaGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +657,7 @@
 		};
 		66FBA19A20599EC200CA317C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18C0306CC8F20E5DFF5B2204 /* Pods-MinderaGalleryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +675,7 @@
 		};
 		66FBA19B20599EC200CA317C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF21E2875A7A25B16CA3AA64 /* Pods-MinderaGalleryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +693,7 @@
 		};
 		66FBA19D20599EC200CA317C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA89E7D841E64235B565B2E /* Pods-MinderaGalleryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +710,7 @@
 		};
 		66FBA19E20599EC200CA317C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F420AD0C0C5B5C763F3A2E /* Pods-MinderaGalleryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
