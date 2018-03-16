@@ -17,25 +17,25 @@ class GalleryVC: UIViewController {
     
     var photos:[FlickrPhoto]?
     
-    var spaceToEdge:CGFloat = 2
-    var spaceToCell:CGFloat = 2
+    var spaceCellToEdge:CGFloat = 2
+    var spaceBetweenCells:CGFloat = 2
     var currentPageNumber = 1 // start at page 1
     var isCurrentPageLoaded = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         configCollectionView()
         
-        APIConnector.getSearchPhotosCached { [weak self] (photos) in
-            self?.photos = photos
-            self?.collectionView.reloadData()
-        }
+        photos = APIConnector.getSearchPhotosCached()
+        collectionView.reloadData()
         
         callAPIPhotos()
         
-        
     }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -45,19 +45,6 @@ class GalleryVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return .portrait
-    }
-
 
 }
 
@@ -90,7 +77,7 @@ extension GalleryVC {
     func callAPIPhotos(){
         
         isCurrentPageLoaded = false
-        APIConnector.getSearchPhotos(page: currentPageNumber, completion: {[weak self] photos in
+        APIConnector.getSearchPhotos(page: currentPageNumber, completion: {[weak self] photos, error in
             
             if photos == nil {
                 self?.isCurrentPageLoaded = true
@@ -102,7 +89,7 @@ extension GalleryVC {
                 self?.photos = photos
             }
             else {
-                //for offline not having the same photo
+                //for offline not having the same photo twice
                 for photo in photos! {
                     if !self!.photos!.contains(photo) {
                         self?.photos?.append(photo)
@@ -116,7 +103,7 @@ extension GalleryVC {
             self?.currentPageNumber += 1
         })
         
-        print("current page number", currentPageNumber)
+        //print("current page number", currentPageNumber)
     }
     
 }
@@ -170,8 +157,12 @@ extension GalleryVC: UICollectionViewDelegate {
 }
 
 //************************************
-// MARK: - collection view Delegate
+// MARK: - collection view Delegate FlowLayout
 //************************************
+
+/* COMMENT:
+ * I didn't use the storyboard properties for the layout as I find it more readable this way.
+ */
 
 extension GalleryVC: UICollectionViewDelegateFlowLayout {
     
@@ -179,21 +170,21 @@ extension GalleryVC: UICollectionViewDelegateFlowLayout {
         
         let nbCellPerRow:CGFloat = 2.0
         
-        let cellWidth:CGFloat = (UIScreen.main.bounds.size.width - 2 * spaceToEdge - (nbCellPerRow - 1) * spaceToCell)/nbCellPerRow;
+        let cellWidth:CGFloat = (UIScreen.main.bounds.size.width - 2 * spaceCellToEdge - (nbCellPerRow - 1) * spaceBetweenCells)/nbCellPerRow;
         return CGSize(width: cellWidth, height: cellWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return spaceToCell
+        return spaceBetweenCells
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return spaceToCell
+        return spaceBetweenCells
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: spaceToEdge, left: spaceToEdge, bottom: spaceToEdge, right: spaceToEdge)
+        return UIEdgeInsets(top: spaceCellToEdge, left: spaceCellToEdge, bottom: spaceCellToEdge, right: spaceCellToEdge)
     }
 }
 
@@ -217,11 +208,10 @@ extension GalleryVC {
         
         let galleryPreview = INSPhotosViewController(photos: insPhotos, initialPhoto: currentPhoto, referenceView: cell)
         
-        
-//        let overlayView = PictureVCOverlayView(frame: CGRect.zero)
-//        overlayView.placeNameLabel.text = place.name
-//        galleryPreview.overlayView = overlayView
-        
+        galleryPreview.didDismissHandler = { galleryPreviewVC in
+            let value = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(value, forKey: "orientation")
+        }
         
         galleryPreview.referenceViewForPhotoWhenDismissingHandler = { photo in
             if let index = insPhotos.index(where: {$0 === photo}) {
@@ -280,3 +270,5 @@ extension GalleryVC {
     }
     
 }
+
+

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/* COMMENT:
+ * I didn't put this class in the storyBoard so that it could be easily reused (althought I didn't need it in this project...)
+ */
+
 class PictureCollectionCell: UICollectionViewCell {
     
     static let nameAndId = "PictureCollectionCell"

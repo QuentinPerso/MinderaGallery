@@ -32,6 +32,7 @@
 		66FBA1E4205AC5F900CA317C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA1E3205AC5F900CA317C /* Reachability.swift */; };
 		66FBA1E7205AD25800CA317C /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA1E5205AD25800CA317C /* Popup.swift */; };
 		66FBA1E8205AD25800CA317C /* Popup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66FBA1E6205AD25800CA317C /* Popup.xib */; };
+		66FBA1EC205BC12C00CA317C /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FBA1EB205BC12C00CA317C /* DiskCache.swift */; };
 		7CADB7C4FABA750174D34BD3 /* Pods_MinderaGalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889B6E1D2E4DEAB54399E48A /* Pods_MinderaGalleryUITests.framework */; };
 		A93B03E90175EE5C253C1941 /* Pods_MinderaGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BF1BAEAECA806C54243BA /* Pods_MinderaGallery.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		66FBA1E3205AC5F900CA317C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		66FBA1E5205AD25800CA317C /* Popup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		66FBA1E6205AD25800CA317C /* Popup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Popup.xib; sourceTree = "<group>"; };
+		66FBA1EB205BC12C00CA317C /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
 		72F420AD0C0C5B5C763F3A2E /* Pods-MinderaGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGalleryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGalleryUITests/Pods-MinderaGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		889B6E1D2E4DEAB54399E48A /* Pods_MinderaGalleryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinderaGalleryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E737355BBF7263B136508E0 /* Pods-MinderaGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinderaGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinderaGallery/Pods-MinderaGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				66FBA1E3205AC5F900CA317C /* Reachability.swift */,
 				66FBA1A6205A75BF00CA317C /* APIConnector.swift */,
+				66FBA1EB205BC12C00CA317C /* DiskCache.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -220,15 +223,12 @@
 		66FBA1C6205A990100CA317C /* INSPhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
-				66FBA1E2205AC4C800CA317C /* ViewControllerTransitionning */,
-				66FBA1C7205A990100CA317C /* INSPhotosDataSource.swift */,
-				66FBA1C8205A990100CA317C /* UIView+INSNibLoading.h */,
-				66FBA1CF205A990100CA317C /* UIView+INSNibLoading.m */,
 				66FBA1C9205A990100CA317C /* INSPhotosViewController.swift */,
+				66FBA1C7205A990100CA317C /* INSPhotosDataSource.swift */,
 				66FBA1D0205A990100CA317C /* INSPhotoViewController.swift */,
-				66FBA1CD205A990100CA317C /* INSScalingImageView.swift */,
-				66FBA1CE205A990100CA317C /* INSPhotosOverlayView.swift */,
-				66FBA1D1205A990100CA317C /* INSPhoto.swift */,
+				66FBA1E9205BB7EB00CA317C /* Views */,
+				66FBA1E2205AC4C800CA317C /* ViewControllerTransitionning */,
+				66FBA1EA205BB80800CA317C /* Helper */,
 			);
 			path = INSPhotoGallery;
 			sourceTree = "<group>";
@@ -241,6 +241,25 @@
 				66FBA1CB205A990100CA317C /* INSPhotosInteractionAnimator.swift */,
 			);
 			path = ViewControllerTransitionning;
+			sourceTree = "<group>";
+		};
+		66FBA1E9205BB7EB00CA317C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66FBA1CD205A990100CA317C /* INSScalingImageView.swift */,
+				66FBA1CE205A990100CA317C /* INSPhotosOverlayView.swift */,
+				66FBA1D1205A990100CA317C /* INSPhoto.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		66FBA1EA205BB80800CA317C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				66FBA1C8205A990100CA317C /* UIView+INSNibLoading.h */,
+				66FBA1CF205A990100CA317C /* UIView+INSNibLoading.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8D66C2D3652EB0C1E36BE116 /* Frameworks */ = {
@@ -568,6 +587,7 @@
 				66FBA1DB205A990100CA317C /* INSPhotoViewController.swift in Sources */,
 				66FBA1DA205A990100CA317C /* UIView+INSNibLoading.m in Sources */,
 				66FBA17420599EC200CA317C /* GalleryVC.swift in Sources */,
+				66FBA1EC205BC12C00CA317C /* DiskCache.swift in Sources */,
 				66FBA1DC205A990100CA317C /* INSPhoto.swift in Sources */,
 				66FBA1A7205A75BF00CA317C /* APIConnector.swift in Sources */,
 				66FBA1D5205A990100CA317C /* INSPhotosTransitionAnimator.swift in Sources */,
@@ -780,7 +800,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68345384DJ;
+				DEVELOPMENT_TEAM = MQK5ADKQSE;
 				INFOPLIST_FILE = MinderaGalleryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quentin.MinderaGalleryTests;
@@ -798,7 +818,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68345384DJ;
+				DEVELOPMENT_TEAM = MQK5ADKQSE;
 				INFOPLIST_FILE = MinderaGalleryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quentin.MinderaGalleryTests;
@@ -815,7 +835,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68345384DJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MinderaGalleryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quentin.MinderaGalleryUITests;
@@ -832,7 +852,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68345384DJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MinderaGalleryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quentin.MinderaGalleryUITests;

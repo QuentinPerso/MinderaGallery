@@ -73,8 +73,6 @@ open class INSPhoto: INSPhotoViewable, Equatable {
         loadImageWithURL(thumbnailImageURL, completion: completion)
     }
     
-    let downloader = ImageDownloader()
-    
     open func loadImageWithURL(_ url: URL?, completion: @escaping (_ image: UIImage?, _ error: Error?) -> ()) {
 //        let session = URLSession(configuration: URLSessionConfiguration.default)
         
@@ -94,29 +92,38 @@ open class INSPhoto: INSPhotoViewable, Equatable {
 //        }
 //        else {
 //            completion(nil, NSError(domain: "INSPhotoDomain", code: -2, userInfo: [ NSLocalizedDescriptionKey: "Image URL not found."]))
+        
 //        }
         
-        if let imageURL = url {
-            
-            let urlRequest = URLRequest(url: imageURL)
-            downloader.download(urlRequest) { response in
-                
-                if let error = response.error {
-                    completion(nil, error)
-                }
-                else if let image = response.result.value {
-                    completion(image, nil)
-                }
-                else {
-                    completion(nil, NSError(domain: "INSPhotoDomain", code: -1, userInfo: [ NSLocalizedDescriptionKey: "Couldn't load image"]))
-                }
-            }
-        }
-        else {
-            completion(nil, NSError(domain: "INSPhotoDomain", code: -2, userInfo: [ NSLocalizedDescriptionKey: "Image URL not found."]))
+        /* COMMENT:
+        * Here are the few changes I made to the INSPhoto framework so as it uses the UIImageView imageDownloader default configuration and cache policy to have the thumbnail or even the full image (if cache's memory on disk allows it) offline
+        */
+        
+        guard let imageURL = url else {
+            completion(nil, NSError(domain: "INSPhotoDomain",
+                                    code: -2,
+                                    userInfo: [ NSLocalizedDescriptionKey: "Image URL not found."]))
+            return
         }
         
+        let urlRequest = URLRequest(url: imageURL)
+        UIImageView.af_sharedImageDownloader.download(urlRequest) { response in
+            
+            if let error = response.error {
+                completion(nil, error)
+            }
+            else if let image = response.result.value {
+                completion(image, nil)
+            }
+            else {
+                completion(nil, NSError(domain: "INSPhotoDomain",
+                                        code: -1,
+                                        userInfo: [ NSLocalizedDescriptionKey: "Couldn't load image"]))
+            }
+        }
     }
+        
+    
 }
 
 public func ==<T: INSPhoto>(lhs: T, rhs: T) -> Bool {

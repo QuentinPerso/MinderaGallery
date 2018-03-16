@@ -1,12 +1,19 @@
 //
-//  Popup
-//  Busity
+//  PictureCollectionCell.swift
+//  MinderaGallery
 //
-//  Created by Quentin BEAUDOUIN on 08/06/2016.
-//  Copyright © 2016 Instama. All rights reserved.
+//  Created by Quentin Beaudouin on 14/03/2018.
+//  Copyright © 2016 Quentin Beaudouin. All rights reserved.
 //
 
 import UIKit
+
+
+/* COMMENT:
+ * I created this custom Alert as I prefered to have access to the control center to enable/disable
+ * internet connection. It actually provide a better UI integration and a nice Mindera purple color, though
+ * it add a bit of code in a small project
+ */
 
 class Popup: UIView, CAAnimationDelegate {
     
@@ -98,11 +105,7 @@ class Popup: UIView, CAAnimationDelegate {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
             self.alpha = 1
             self.mainView.transform = CGAffineTransform(translationX: 0, y: 0)
-        }, completion: { _ in
-            if confetti {
-                self.createParticles()
-            }
-        })
+        }, completion: nil)
 
 
     }
@@ -127,76 +130,6 @@ class Popup: UIView, CAAnimationDelegate {
         
     }
     
-    
-    func createParticles() {
-
-        let particleEmitter = CAEmitterLayer()
-        
-        particleEmitter.emitterPosition = CGPoint(x: self.center.x, y: -40)
-        particleEmitter.emitterShape = kCAEmitterLayerLine
-        particleEmitter.emitterSize = CGSize(width: self.frame.size.width/2, height: 1)
-        
-        let red = makeEmitterCell(color: #colorLiteral(red: 1, green: 0.6551469717, blue: 0.7989328296, alpha: 1))
-        let green = makeEmitterCell(color: #colorLiteral(red: 1, green: 0.4528310671, blue: 0.1680153346, alpha: 1))
-        let blue = makeEmitterCell(color: #colorLiteral(red: 1, green: 0.1965393141, blue: 0.2948422064, alpha: 1))
-        
-        particleEmitter.emitterCells = [red, green, blue]
-        particleEmitter.birthRate = 0
-        
-        particleEmitter.beginTime = CACurrentMediaTime()
-        particleEmitter.birthRate = 100
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            particleEmitter.birthRate = 4
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            particleEmitter.birthRate = 0
-        }
-        
-        
-        self.layer.addSublayer(particleEmitter)
-    }
-    
-    func makeEmitterCell(color: UIColor) -> CAEmitterCell {
-        let cell = CAEmitterCell()
-        cell.birthRate = 4
-        cell.lifetime = 7.0
-        cell.lifetimeRange = 0
-        cell.color = color.cgColor
-        cell.velocity = 200
-        cell.velocityRange = 70
-        cell.emissionLongitude = CGFloat.pi
-        cell.emissionRange = CGFloat.pi / 3
-        cell.spin = 2
-        cell.spinRange = 3
-        cell.scaleRange = 0.5
-        cell.scaleSpeed = -0.05
-        
-        cell.contents = confeti(size: 4).cgImage
-        
-       
-        
-        return cell
-    }
-    
-    private func confeti(size: Int) -> UIImage {
-        
-        let floatSize = CGFloat(size)
-        let rect = CGRect(x:0,y: 0,width: floatSize,height: floatSize*1.75)
- 
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
-        
-        let ovalPath = UIBezierPath(rect: rect)
-        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
-        ovalPath.fill()
-        
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return image
-    }
-
-
-
     func hide(good:Bool){
         if good {
             

@@ -150,7 +150,7 @@ open class INSPhotosViewController: UIViewController, UIPageViewControllerDataSo
         let textColor = view.tintColor ?? UIColor.white
         if let overlayView = overlayView as? INSPhotosOverlayView {
             overlayView.photosViewController = self
-            //overlayView.titleTextAttributes = [NSForegroundColorAttributeName: textColor]
+            overlayView.titleTextAttributes = [.foregroundColor: textColor]
         }
     }
     
@@ -182,6 +182,11 @@ open class INSPhotosViewController: UIViewController, UIPageViewControllerDataSo
         UIView.animate(withDuration: 0.25) { () -> Void in
             self.setNeedsStatusBarAppearanceUpdate()
         }
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     
     private func setupOverlayView() {
@@ -248,6 +253,7 @@ open class INSPhotosViewController: UIViewController, UIPageViewControllerDataSo
     // MARK: - View Controller Dismissal
     
     open override func dismiss(animated flag: Bool, completion: (() -> Void)?) {
+        
         if presentedViewController != nil {
             super.dismiss(animated: flag, completion: completion)
             return
